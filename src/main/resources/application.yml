@@ -1,0 +1,25 @@
+spring:
+  security:
+    user:
+      name: dev
+      password: dev123
+      roles: ADMIN,USER
+
+
+security:
+  oauth2:
+    client:
+      client-id: victor
+      client-secret: tractor
+      access-token-validity-seconds: 900
+      authorized-grant-types: refresh_token,authorization_code,password,client_credentials
+      scope: READ,WRITE
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8302/eureka/
+  instance:
+    hostname: localhost         
